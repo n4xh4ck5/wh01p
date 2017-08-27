@@ -1,0 +1,8 @@
+requests
+urlparse
+optparse
+urllib2
+closing
+json
+argparse
+socket
