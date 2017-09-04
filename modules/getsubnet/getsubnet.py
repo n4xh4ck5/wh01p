@@ -1,6 +1,9 @@
 #!/usr/bin/env python
+#-*- coding:utf-8 -*-
+
 import requests
 import json
+
 #FUNTION GETSUBNET
 def GetSubnet(target):
 	url = "https://freeapi.robtex.com/ipquery/"+target
