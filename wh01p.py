@@ -44,7 +44,7 @@ def banner():
     ** DISCLAMER This tool was developed for educational goals. 
     ** The author is not responsible for using to others goals.
     ** A high power, carries a high responsibility!
-    ** Version 1.0"""
+    ** Version 1.1"""
 
 """FUNCTION HELP """
 def help():
