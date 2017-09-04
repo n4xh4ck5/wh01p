@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+#-*- coding:utf-8 -*-
+
 import requests
 #Libraries to export results
 from urlparse import urlparse
@@ -54,7 +56,7 @@ def help():
 def main (argv):
 	parser = argparse.ArgumentParser(description="Tool to obtain information about IP or domain: Geolocation, network, whois and open ports", formatter_class=RawTextHelpFormatter)
 	parser.add_argument('-t','--target', help="The IP which it wants to search",required=False)
-	parser.add_argument('-i','--input', help="File in json format which contains the domains or IP to obtain a piece of information ",required=False)
+	parser.add_argument('-i','--input', help="File which contains the domains or IP to obtain a piece of information in format txt or json",required=False)
 	args = parser.parse_args()
 	banner()
 	help()
@@ -72,9 +74,11 @@ def main (argv):
 		for target in data_input:
 			print "\n\t---" + target + "---\n"
 			flag = verifytarget.VerifyTarget(target)
+			print flag
 			if flag == False:
 				#Target is a domain -> obtain the IP
 				target = getip.GetIP(target)
+				print target
 			### Get info and subnet
 			print "\nInformation about network:\n"
 			getsubnet.GetSubnet(target)
