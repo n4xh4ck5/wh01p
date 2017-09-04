@@ -74,11 +74,9 @@ def main (argv):
 		for target in data_input:
 			print "\n\t---" + target + "---\n"
 			flag = verifytarget.VerifyTarget(target)
-			print flag
 			if flag == False:
 				#Target is a domain -> obtain the IP
 				target = getip.GetIP(target)
-				print target
 			### Get info and subnet
 			print "\nInformation about network:\n"
 			getsubnet.GetSubnet(target)
