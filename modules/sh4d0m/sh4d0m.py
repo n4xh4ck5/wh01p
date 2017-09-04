@@ -1,4 +1,6 @@
  #!/usr/bin/env python
+ #-*- coding:utf-8 -*-
+ 
 import sys
 import shodan
 
@@ -33,9 +35,7 @@ def CreateShodan(ip):
         search_ip = ip
         shodan_api_object = create_shodan_object()
         port_target = shodan_ip_search(shodan_api_object, search_ip)
-        #print port_target
         ports = str(port_target).replace("[","").replace("]","")
-        #print ports
         return ports
     except Exception as e:
         print 'Error: %s' % e
