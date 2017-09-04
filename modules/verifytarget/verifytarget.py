@@ -1,6 +1,9 @@
 #!/usr/bin/env python
+#-*- coding:utf-8 -*-
+
 import re
 import socket
+
 def VerifyTarget(target):
 	match = True
 	#True -> IP
@@ -11,9 +14,6 @@ def VerifyTarget(target):
 			if re.match(r'^((\d{1,2}|1\d{2}|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d{2}|2[0-4]\d|25[0-5])$', target):  
 				#Valid IP
 				return True
-			"""else:
-				print "Invalid IP. Please enter an IP or domain"
-				exit (0)"""
 		except Exception as e:
 			print e
 			pass
